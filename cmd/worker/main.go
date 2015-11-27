@@ -15,7 +15,7 @@ import (
 	"github.com/kingsoft-wps/kingtask/worker"
 )
 
-var configFile *string = flag.String("config", "/etc/worker.conf", "worker config file")
+var configFile *string = flag.String("config", "/etc/worker.yaml", "worker config file")
 var logLevel *string = flag.String("log-level", "", "log level [debug|info|warn|error], default error")
 
 const (
