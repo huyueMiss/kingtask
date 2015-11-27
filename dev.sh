@@ -3,8 +3,8 @@
 export QINGTOP=$(pwd)
 export QINGROOT="${QINGROOT:-${QINGTOP/\/src\/github.com\/kingsoft-wps\/kingtask/}}"
 
-echo $QINGTOP
-echo "${QINGTOP/\/src\/github.com\/kingsoft-wps\/kingtask/}"
+#echo $QINGTOP
+#echo "${QINGTOP/\/src\/github.com\/kingsoft-wps\/kingtask/}"
 # QINGTOP sanity check
 if [[ "$QINGTOP" == "${QINGTOP/\/src\/github.com\/kingsoft-wps\/kingtask/}" ]]; then
     echo "WARNING: QINGTOP($QINGTOP) does not contain src/github.com/kingsoft-wps/kingtask"
