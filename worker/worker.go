@@ -13,12 +13,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/flike/golog"
-
-	"github.com/kingsoft-wps/kingtask/config"
-	"github.com/kingsoft-wps/kingtask/core/errors"
-	"github.com/kingsoft-wps/kingtask/task"
 	redis "gopkg.in/redis.v3"
+
+	"github.com/flike/golog"
+	"github.com/huyueMiss/kingtask/config"
+	"github.com/huyueMiss/kingtask/core/errors"
+	"github.com/huyueMiss/kingtask/task"
+
+
+
 )
 
 type Worker struct {
@@ -30,11 +33,13 @@ type Worker struct {
 }
 
 func NewWorker(cfg *config.WorkerConfig) (*Worker, error) {
+
 	var err error
 	w := new(Worker)
 	w.cfg = cfg
 
 	vec := strings.SplitN(cfg.RedisAddr, "/", 2)
+
 	if len(vec) == 2 {
 		w.redisAddr = vec[0]
 		w.redisDB, err = strconv.Atoi(vec[1])
@@ -283,6 +288,9 @@ func (w *Worker) ExecBin(binPath string, args []string, maxRunTime int64) (strin
 	var err error
 
 	if len(args) == 0 {
+		println("execute")
+		println(binPath)
+		//cmd = exec.Command("cmd.exe", "/k", " start "+binPath)
 		cmd = exec.Command(binPath)
 	} else {
 		cmd = exec.Command(binPath, args...)

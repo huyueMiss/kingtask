@@ -11,11 +11,12 @@ import (
 	"syscall"
 
 	"github.com/flike/golog"
-	"github.com/kingsoft-wps/kingtask/config"
-	"github.com/kingsoft-wps/kingtask/worker"
+
+	"github.com/huyueMiss/kingtask/config"
+	"github.com/huyueMiss/kingtask/worker"
 )
 
-var configFile *string = flag.String("config", "/etc/worker.yaml", "worker config file")
+var configFile *string = flag.String("config", "./etc/worker.yaml", "worker config file")
 var logLevel *string = flag.String("log-level", "", "log level [debug|info|warn|error], default error")
 
 const (

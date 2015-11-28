@@ -1,9 +1,9 @@
 #redis地址
 redis : 127.0.0.1:6379
 #异步任务可执行文件目录
-bin_path : /Users/flike/src
+bin_path : ./bin
 #日志输出目录，可不配置
-#log_path : /Users/flike/src
+#log_path : ./log
 #日志级别
 log_level: debug
 
@@ -12,4 +12,4 @@ period : 1
 #结果保存时间，单位为秒
 result_keep_time : 1000
 #任务执行最长时间，单位秒
-task_run_time: 30
+task_run_time: 2
