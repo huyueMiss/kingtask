@@ -1,5 +1,4 @@
 .DS_Store
-/bin/*
 /log/*
 build_config.mk
 .idea
