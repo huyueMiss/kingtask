@@ -47,7 +47,7 @@ func main() {
 			fmt.Printf("new log file error:%v\n", err.Error())
 			return
 		}
-		golog.GlobalLogger = golog.New(sysFile, golog.Lfile|golog.Ltime|golog.Llevel)
+		golog.GlobalLogger = golog.New(sysFile, golog.Lfile | golog.Ltime | golog.Llevel)
 	}
 
 	if *logLevel != "" {
